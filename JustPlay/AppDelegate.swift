@@ -16,6 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         return true
     }
+    
+    //Check if user is authenticated
+    //Send to Home View
 
     // MARK: UISceneSession Lifecycle
 
