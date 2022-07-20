@@ -8,6 +8,7 @@
 import UIKit
 import AuthenticationServices
 import Security
+import CloudKit
 
 class LoginViewController: UIViewController {
     
@@ -19,7 +20,6 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         view.backgroundColor = .white
-        
         configureStackView()
     }
     
@@ -63,7 +63,7 @@ class LoginViewController: UIViewController {
         StackView.addArrangedSubview(privacylabel)
         
         
-        //Terms Button
+        //TODO: Terms Button
         
         
         setStackViewConstraints()
@@ -112,7 +112,10 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
             let fullName = appleIDCredential.fullName
             let email = appleIDCredential.email
             
-           //Save user information in Cloudkit
+           //TODO: Save user information in Cloudkit
+           //TODO: Retrieve Credentials on apps launch via Cloudkit
+
+
             
             
             let attributes: [String: Any] = [
@@ -132,10 +135,9 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
             }
             
             
-            //Retrieve Credentials on apps launch via Cloudkit
+
             
-            
-            //Send user to to AppleMusicConnect view controller after authentication
+            //TODO: Send user to to AppleMusicConnect view controller after authentication
             
             
         

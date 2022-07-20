@@ -17,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    //Check if user is authenticated
-    //Send to Home View
+    //TODO: Check if user is authenticated
+    //TODO: Send to Home View
 
     // MARK: UISceneSession Lifecycle
 
