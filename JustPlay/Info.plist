@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>NSAppleMusicUsageDescription</key>
-	<string>We are requesting permission to connect Apple Music so you can use this service.</string>
+	<string>We would like to use Apple Music to </string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

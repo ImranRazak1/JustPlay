@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B6AF1B81288821D2007835C9 /* ConnectAppleMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AF1B80288821D2007835C9 /* ConnectAppleMusicViewController.swift */; };
 		B6AF1B8428882203007835C9 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6AF1B8328882203007835C9 /* CloudKit.framework */; };
+		B6AF1B862890B92E007835C9 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AF1B852890B92E007835C9 /* CollectionViewController.swift */; };
+		B6AF1B882890BB0C007835C9 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AF1B872890BB0C007835C9 /* CollectionViewCell.swift */; };
 		B6F4EABB28862C2C0086B9D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F4EABA28862C2C0086B9D7 /* AppDelegate.swift */; };
 		B6F4EABD28862C2C0086B9D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F4EABC28862C2C0086B9D7 /* SceneDelegate.swift */; };
 		B6F4EABF28862C2C0086B9D7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F4EABE28862C2C0086B9D7 /* LoginViewController.swift */; };
@@ -18,8 +19,9 @@
 
 /* Begin PBXFileReference section */
 		B6AF1B7F28877617007835C9 /* JustPlay.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JustPlay.entitlements; sourceTree = "<group>"; };
-		B6AF1B80288821D2007835C9 /* ConnectAppleMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectAppleMusicViewController.swift; sourceTree = "<group>"; };
 		B6AF1B8328882203007835C9 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		B6AF1B852890B92E007835C9 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		B6AF1B872890BB0C007835C9 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		B6F4EAB728862C2C0086B9D7 /* JustPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6F4EABA28862C2C0086B9D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6F4EABC28862C2C0086B9D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,7 +89,8 @@
 			isa = PBXGroup;
 			children = (
 				B6F4EABE28862C2C0086B9D7 /* LoginViewController.swift */,
-				B6AF1B80288821D2007835C9 /* ConnectAppleMusicViewController.swift */,
+				B6AF1B852890B92E007835C9 /* CollectionViewController.swift */,
+				B6AF1B872890BB0C007835C9 /* CollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -183,7 +186,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6AF1B81288821D2007835C9 /* ConnectAppleMusicViewController.swift in Sources */,
+				B6AF1B882890BB0C007835C9 /* CollectionViewCell.swift in Sources */,
+				B6AF1B862890B92E007835C9 /* CollectionViewController.swift in Sources */,
 				B6F4EABF28862C2C0086B9D7 /* LoginViewController.swift in Sources */,
 				B6F4EABB28862C2C0086B9D7 /* AppDelegate.swift in Sources */,
 				B6F4EABD28862C2C0086B9D7 /* SceneDelegate.swift in Sources */,
