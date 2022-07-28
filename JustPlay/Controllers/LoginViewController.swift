@@ -45,7 +45,7 @@ class LoginViewController: UIViewController {
         //Description Text
         let descriptionText =  UILabel()
         descriptionText.numberOfLines = 4
-        descriptionText.text = "Music you love, easier to find, easier to enjoy. Connect Apple Music to start enjoying a simpler experience."
+        descriptionText.text = "Music you love, easier to find, easier to enjoy. Find a Genre, Find a playlist, Enjoy the experience"
         descriptionText.textAlignment = .center
         StackView.addArrangedSubview(descriptionText)
         
