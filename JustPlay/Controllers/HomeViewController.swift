@@ -10,14 +10,23 @@ import UIKit
 class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
 
     
-    var collectionView: UICollectionView!
+     var collectionView: UICollectionView!
     
+    private let titleView: UILabel = {
+        let label = UILabel()
+        return label
+    }()
+  
     
   
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        //Navigation Title
+        view.addSubview(titleView)
+        titleView.text = "Hello"
+               
         // Do any additional setup after loading the view.
         
         
@@ -25,12 +34,14 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset =  UIEdgeInsets (top: 0, left: 10, bottom: 30, right: 10)
         layout.itemSize = CGSize(width: 164, height: 157)
+         
 
     
         
         //Configuring Collection View
-       
-        collectionView = UICollectionView(frame: view.frame, collectionViewLayout: layout)
+        
+        collectionView = UICollectionView(frame: view.bounds
+                                          , collectionViewLayout: layout)
         collectionView.showsVerticalScrollIndicator = false
         
         collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: CollectionViewCell.Identifier)
@@ -41,11 +52,12 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         collectionView.bounces = true
         collectionView.alwaysBounceVertical =  true
-        
+       
         view.addSubview(collectionView)
         
         
     }
+    
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 3
@@ -59,10 +71,12 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.Identifier, for: indexPath) as! CollectionViewCell
        
         //Add Genre Text and background Image from Model
-        
-        cell.backgroundColor =  .gray
+        //cell.backgroundColor = .systemBlue
         return cell
     }
+    
+    
+    //StackView
     
     
 
