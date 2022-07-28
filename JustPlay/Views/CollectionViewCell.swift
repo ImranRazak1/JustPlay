@@ -66,20 +66,12 @@ class CollectionViewCell: UICollectionViewCell {
         let genreText =  UILabel()
         genreText.text = "Sleep Genre"
         genreText.textColor = .systemBlue
+        genreText.translatesAutoresizingMaskIntoConstraints = false
         return genreText
     }()
     
     
     //MARK: background Configruations
-    
-    func finishedViews() {
-        addSubview(ChillGenre)
-        addSubview(FeelGoodGenre)
-        addSubview(FitnessGenre)
-        addSubview(FeelingBlueGenre)
-        addSubview(PartyGenre)
-        addSubview(SleepGenre)
-    }
 
     
 }

@@ -7,12 +7,12 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
 
     
-    var collectionView = UICollectionView()
-
-        
+    var collectionView: UICollectionView!
+    
+    
   
 
     override func viewDidLoad() {
@@ -23,23 +23,26 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         //Layout Configruations
         let layout = UICollectionViewFlowLayout()
-        //layout.sectionInset =  UIEdgeInsets (top: 0, left: 0, bottom: 0, right: 0)
+        layout.sectionInset =  UIEdgeInsets (top: 0, left: 10, bottom: 30, right: 10)
         layout.itemSize = CGSize(width: 164, height: 157)
 
     
         
         //Configuring Collection View
-        //collectionView.translatesAutoresizingMaskIntoConstraints =  false
-        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
-        collectionView.dataSource = self
-        collectionView.delegate = self
-        collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: CollectionViewCell.Identifier)
+       
+        collectionView = UICollectionView(frame: view.frame, collectionViewLayout: layout)
         collectionView.showsVerticalScrollIndicator = false
+        
+        collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: CollectionViewCell.Identifier)
         collectionView.backgroundColor = .white
         
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        
+        collectionView.bounces = true
+        collectionView.alwaysBounceVertical =  true
         
         view.addSubview(collectionView)
-        
         
         
     }
@@ -54,11 +57,13 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.Identifier, for: indexPath) as! CollectionViewCell
+       
+        //Add Genre Text and background Image from Model
+        
+        cell.backgroundColor =  .gray
         return cell
     }
     
-    func configureCollectionView() {
-        
-    }
+    
 
 }
