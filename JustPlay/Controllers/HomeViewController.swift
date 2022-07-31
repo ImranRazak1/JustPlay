@@ -2,82 +2,36 @@
 //  HomeViewController.swift
 //  JustPlay
 //
-//  Created by Imran razak on 28/07/2022.
+//  Created by Imran razak on 31/07/2022.
 //
 
 import UIKit
 
-class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
-
+class HomeViewController: UIViewController {
     
-     var collectionView: UICollectionView!
+    var collectionView: UICollectionView!
     
-    private let titleView: UILabel = {
-        let label = UILabel()
-        return label
-    }()
-  
-    
-  
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //Navigation Title
-        view.addSubview(titleView)
-        titleView.text = "Hello"
-               
+
         // Do any additional setup after loading the view.
         
-        
-        //Layout Configruations
-        let layout = UICollectionViewFlowLayout()
-        layout.sectionInset =  UIEdgeInsets (top: 0, left: 10, bottom: 30, right: 10)
-        layout.itemSize = CGSize(width: 164, height: 157)
-         
-
-    
-        
-        //Configuring Collection View
-        
-        collectionView = UICollectionView(frame: view.bounds
-                                          , collectionViewLayout: layout)
-        collectionView.showsVerticalScrollIndicator = false
-        
-        collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: CollectionViewCell.Identifier)
-        collectionView.backgroundColor = .white
-        
-        collectionView.dataSource = self
-        collectionView.delegate = self
-        
-        collectionView.bounces = true
-        collectionView.alwaysBounceVertical =  true
-       
+        collectionView =  UICollectionView(frame: view.bounds, collectionViewLayout: UICollectionViewFlowLayout())
+        collectionView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        collectionView.backgroundColor = .systemBackground
         view.addSubview(collectionView)
-        
-        
     }
     
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 3
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.Identifier, for: indexPath) as! CollectionViewCell
-       
-        //Add Genre Text and background Image from Model
-        //cell.backgroundColor = .systemBlue
-        return cell
-    }
-    
-    
-    //StackView
-    
-    
+    */
 
 }
