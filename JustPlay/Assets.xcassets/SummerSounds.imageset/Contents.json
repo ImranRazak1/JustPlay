@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "luke-chesser-1hpd7eeVlpQ-unsplash.jpg",
+      "filename" : "SummerSounds.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "SummerSounds@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "SummerSounds@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
